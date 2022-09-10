@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 
-const ContactForm = () => {
-  const [contactinfo, setContactInfo] = useState({
+ const ContactForm = ({ addContact }) => {
+  const [contactInfo, setContactInfo] = useState({
     username: '',
     email: '',
     phoneNumber: '',
   });
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(contactinfo)
-    setContactInfo({username:"", email:"", phoneNumber:""})
+    addContact(contactInfo);
+    setContactInfo({ username: '', email: '', phoneNumber: '' });
   };
 
   const handleInputChange = (event) => {
-    setContactInfo({ ...contactinfo, [event.target.name]: event.target.value });
-    
+    setContactInfo({...contactInfo, [event.target.name]: event.target.value });
   };
   return (
     <form onSubmit={handleFormSubmit} className="form-style">
       <label>
         Username:
         <input
-          value={contactinfo.username}
+          value={contactInfo.username}
           onChange={handleInputChange}
           type="text"
           name="username"
@@ -30,7 +29,7 @@ const ContactForm = () => {
       <label>
         Email:
         <input
-          value={contactinfo.email}
+          value={contactInfo.email}
           onChange={handleInputChange}
           type="email"
           name="email"
@@ -39,7 +38,7 @@ const ContactForm = () => {
       <label>
         Phone Number:
         <input
-          value={contactinfo.phoneNumber}
+          value={contactInfo.phoneNumber}
           onChange={handleInputChange}
           type="number"
           name="phoneNumber"
