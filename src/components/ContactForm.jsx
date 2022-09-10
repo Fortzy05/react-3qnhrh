@@ -7,11 +7,14 @@ const ContactForm = () => {
     phoneNumber: '',
   });
   const handleFormSubmit = (event) => {
+    event.preventDefault();
     console.log(contactinfo)
+    setContactInfo({username:"", email:"", phoneNumber:""})
   };
 
   const handleInputChange = (event) => {
     setContactInfo({ ...contactinfo, [event.target.name]: event.target.value });
+    
   };
   return (
     <form onSubmit={handleFormSubmit} className="form-style">

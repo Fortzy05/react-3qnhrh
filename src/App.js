@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 import ContactForm from "./components/ContactForm.jsx"
 
 
 
 export default function App() {
-  return <ContactForm />;
+  const[contacts, updateContacts] = useState([])
+
+  const addContact = (contactInfo) =>{
+    updateContacts([...contacts, contactInfo])
+  }
+  return <ContactForm addContact={addContact} />;
 }
