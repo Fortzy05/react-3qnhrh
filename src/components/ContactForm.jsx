@@ -16,6 +16,7 @@ import React, { useState } from 'react';
     setContactInfo({...contactInfo, [event.target.name]: event.target.value });
   };
   return (
+    <section>
     <form onSubmit={handleFormSubmit} className="form-style">
       <label>
         Username:
@@ -46,6 +47,16 @@ import React, { useState } from 'react';
       </label>
       <button className="btn">Submit</button>
     </form>
+    <h5>
+      username: {contactInfo.username}
+      <p>
+        Email: {contactInfo.email}
+      </p>
+      <p>
+        Phone Number:{contactInfo.phoneNumber}
+      </p>
+    </h5>
+    </section>
   );
 };
 export default ContactForm;
