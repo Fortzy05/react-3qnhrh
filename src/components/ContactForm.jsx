@@ -47,15 +47,6 @@ import React, { useState } from 'react';
       </label>
       <button className="btn">Submit</button>
     </form>
-    <h5>
-      username: {contactInfo.username}
-      <p>
-        Email: {contactInfo.email}
-      </p>
-      <p>
-        Phone Number:{contactInfo.phoneNumber}
-      </p>
-    </h5>
     </section>
   );
 };
