@@ -20,15 +20,14 @@ const MyButton = ({myCount}) =>{
     setCount(count => count + 1)
   }
   return(<>
-  <button className="btn" onClick={handleClick}>you clicked me:{count} </button>
-
-  <button className="btn" onClick={handleClick}>you clicked me: {count}</button>
+  <button className="btn" onClick={handleClick}>you clicked me: {count} </button>
   </>
   )
 }
 
 const App = () => {
   return (<>
+  <MyButton/>
   <MyButton/>
   </>)
 };
