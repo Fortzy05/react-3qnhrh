@@ -14,19 +14,21 @@
 
 import React,{useState} from 'react';
 
-const MyButton = () =>{
+const MyButton = ({myCount}) =>{
   const[count, setCount] = useState(0)
   const handleClick = () =>{
-    setCount(count + 1)
+    setCount(count => count + 1)
   }
-  return(
-  <button className="btn" onClick={handleClick}>you clicked me:{count} </button>)
+  return(<>
+  <button className="btn" onClick={handleClick}>you clicked me:{count} </button>
+
+  <button className="btn" onClick={handleClick}>you clicked me: {count}</button>
+  </>
+  )
 }
 
 const App = () => {
   return (<>
-  <MyButton/>
-  <MyButton/>
   <MyButton/>
   </>)
 };
