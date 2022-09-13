@@ -12,28 +12,23 @@
 //   return <ContactForm addContact={addContact} />;
 // }
 
-import React from "react";
+import React,{useState} from 'react';
 
-const products = [{
-  title: 'Cabbage', isFruit: false, id: 1
-},
-{
-
-    title: 'Garlic', isFruit: false, id: 2
-  },
-  {
-    title: 'Apple', isFruit: true, id: 3
-  } ];
-
-
-  const listItem = products.map(product => <li style={{color: product.isFruit ? 'magenta' :'darkgreen'}} key={product.id}>{product.title}</li>)
-
-
-
-const App = () =>{
-  return <ol>{listItem}</ol>
+const MyButton = () =>{
+  const[count, setCount] = useState(0)
+  const handleClick = () =>{
+    setCount(count + 1)
+  }
+  return(
+  <button className="btn" onClick={handleClick}>you clicked me:{count} </button>)
 }
 
-
+const App = () => {
+  return (<>
+  <MyButton/>
+  <MyButton/>
+  <MyButton/>
+  </>)
+};
 
 export default App;
