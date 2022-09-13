@@ -15,18 +15,18 @@
 import React from "react";
 
 const products = [{
-  title: 'cabbage', id: 1
+  title: 'cabbage', isFruit: false, id: 1
 },
 {
 
-    title: 'Garlic', id: 2
+    title: 'Garlic',isFruit: false, id: 2
   },
   {
-    title: 'Apple', id: 3
+    title: 'Apple',isFruit: true, id: 3
   } ];
 
 
-  const listItem = products.map(product => <li key={product.id}>{product.title}</li>)
+  const listItem = products.map(product => <li style={{color: product.isFruit ? 'magenta' :'darkgreen'}} key={product.id}>{product.title}</li>)
 
 
 
