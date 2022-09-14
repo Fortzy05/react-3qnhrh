@@ -13,9 +13,10 @@
 // }
 
 import React from 'react';
+import FilterableProductTable from "./components/FilterableProductTable"
 
 
-const data = [
+const PRODUCTS = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
   { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
@@ -27,9 +28,8 @@ const data = [
 
 const App = () => {
   
-  return (
-    <div>Hello world!</div>
-  );
+  return <FilterableProductTable products={PRODUCTS} />;
+  
 };
 
 export default App;

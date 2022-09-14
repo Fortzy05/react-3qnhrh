@@ -1,6 +1,6 @@
 import React from "react";
-import ProductRow from "./component/ProductRow";
-import ProductCategoryRow from "./component/ProductCategoryRow";
+import ProductRow from "../components/ProductRow";
+import ProductCategoryRow from "../components/ProductCategoryRow";
 
 function ProductTable({ products }) {
   const rows = [];
