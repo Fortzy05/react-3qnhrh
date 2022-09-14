@@ -12,25 +12,30 @@
 //   return <ContactForm addContact={addContact} />;
 // }
 
-import React,{useState} from 'react';
+import React from 'react';
 
-const MyButton = ({count, onClick}) =>{
-  return(<>
-    <button className="btn" onClick={onClick}>you clicked me: {count} </button>
-    </>
+
+const data = [
+  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+  { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+  { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+  { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+]
+
+
+const MyButton = () => {
+  return (
+    <div></div>
   )
-}
+};
 
 const App = () => {
-  const[count, setCount] = useState(0)
-  const handleClick = () =>{
-    setCount(count => count + 1)
-  }
   
-  return (<>
-  <MyButton count={count} onClick={handleClick}/>
-  <MyButton count={count} onClick={handleClick}/>
-  </>)
+  return (
+    <div>Hello world!</div>
+  );
 };
 
 export default App;
