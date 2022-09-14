@@ -25,12 +25,6 @@ const data = [
 ]
 
 
-const MyButton = () => {
-  return (
-    <div></div>
-  )
-};
-
 const App = () => {
   
   return (
